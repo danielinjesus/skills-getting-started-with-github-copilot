@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
                   (email) => `
                     <li>
                       <span>${escapeHtml(email)}</span>
-                      <button class="delete-participant" data-activity="${escapeHtml(
+                      <button class="delete-participant" data-activity="${encodeURIComponent(
                         name
-                      )}" data-email="${escapeHtml(email)}" title="Unregister">🗑️</button>
+                      )}" data-email="${encodeURIComponent(email)}" title="Unregister" aria-label="Unregister participant">🗑️</button>
                     </li>`
                 )
                 .join("")}</ul>`
